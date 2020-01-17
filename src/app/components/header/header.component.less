@@ -1,0 +1,57 @@
+
+
+.header {
+    .main-nav {
+        list-style: none;
+        display:flex;
+        margin-block-start: 0;
+        padding-inline-start: 0;
+    }
+    .main-nav li {
+        list-style: none;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        :hover {
+            background:tomato;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background: #343a40;
+            height: 50px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            :hover {
+                background:tomato;
+            }
+         
+        }
+        .lineage-dropdown,
+        .entities-dropdown,
+        .requests-dropdown {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+                li {
+                    top: 0;
+                  //  display: block;
+                     display: none;
+                    position: relative;
+                    :hover {
+                        background:tomato;
+                    }
+                }
+    
+        }
+    }
+}
+
+
+
+

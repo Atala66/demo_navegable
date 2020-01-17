@@ -4,13 +4,16 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   // default
-  { path: '', loadChildren: () => import(`../views/home/home.module`).
-  then(m => m.HomeModule)},
+  { path: '', loadChildren: () => import(`./views/login/login.module`).
+  then(m => m.LoginModule)},
+  // login
+  { path: '', loadChildren: () => import(`./views/login/login.module`).
+  then(m => m.LoginModule)},
   // home
-  { path: 'home', loadChildren: () => import(`../views/home/home.module`).
+  { path: 'home', loadChildren: () => import(`./views/home/home.module`).
   then(m => m.HomeModule)},
   // test -reusable-form
-  { path: 'test-form', loadChildren: () => import(`../views/test-form-view/test-form-view.module`).
+  { path: 'test-form', loadChildren: () => import(`./views/test-form-view/test-form-view.module`).
   then(m => m.TestFormViewModule)},
 ];
 
