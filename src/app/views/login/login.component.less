@@ -1,34 +1,56 @@
-form { 
-    height: 200px;
-    width: 400px;
-  
-    display: flex; 
-    flex-direction: column; 
-    flex: 0 0 auto; 
-    
-    border: 1px solid; 
-    border-radius: 5px;
-    padding: 15px;
-    background: lightblue; 
+.form {
+  border: 1px solid #555555;
+  padding: 20px;
+  width: 50%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 27px;
+  padding-right: 15px;
+}
+
+.btn {
+  position: relative;
+  vertical-align: top;
+  height: 40px;
+  width: 25%;
+  padding: 0;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  background: #4d4d4d;
+  border: 0;
+  border-bottom: 2px solid #d0d0d0;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+input:not([type="submit"]) {
+  flex: 1;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+p {
+  display: flex;
+}
+
+label {
+  width: 7em;
+  margin-right: 0.5em;
+}
+
+@media (max-width: 600px) {
+  p {
+    display: block;
   }
-  form label, form button {
-    margin-top: 15px;
+  input {
+    width: 100%;
   }
-  form label {
-    font-size: 20px;
+
+  input[type="submit"] {
+    width: 100%;
   }
-  form input {
-    flex: 1 1 auto;
-    font-size: 20px;
-  }
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .buttons button {
-    flex: 0 1 95px;
-    font-size: 20px;
-  }
-  
-  
+}

@@ -1,4 +1,13 @@
-<p>test-form works!</p>
+<div [formGroup]="form">
+  <label for="first-name">First Name</label>
+  <input formControlName="firstName" id="first-name" />
 
+  <label for="last-name">Last Name</label>
+  <input formControlName="lastName" id="last-name" />
 
-<h1>I am the test view</h1>
+  <label for="email">Email</label>
+  <input formControlName="email" type="email" id="email" />
+  <div *ngIf="emailControl.touched && emailControl.hasError('required')" class="error">
+    email is required
+  </div>
+</div>

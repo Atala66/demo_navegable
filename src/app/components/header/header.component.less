@@ -1,57 +1,201 @@
 
-
-.header {
-    .main-nav {
-        list-style: none;
-        display:flex;
-        margin-block-start: 0;
-        padding-inline-start: 0;
-    }
-    .main-nav li {
-        list-style: none;
-        position: relative;
-        width: 100%;
-        text-align: center;
-        :hover {
-            background:tomato;
-        }
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            background: #343a40;
-            height: 50px;
-            font-family: 'Raleway', sans-serif;
-            font-weight: bold;
-            text-decoration: none;
-            text-transform: uppercase;
-            :hover {
-                background:tomato;
-            }
-         
-        }
-        .lineage-dropdown,
-        .entities-dropdown,
-        .requests-dropdown {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-                li {
-                    top: 0;
-                  //  display: block;
-                     display: none;
-                    position: relative;
-                    :hover {
-                        background:tomato;
-                    }
-                }
-    
-        }
-    }
-}
-
-
-
+  /* Base styles that apply to all menus */
+  .menu-section {
+      padding-bottom: 2em;
+      margin-bottom: 2em;
+      border-bottom: 1px solid hsl(0, 0%, );
+  }
+  
+  .menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      background: hsl(0, 0%, 15%);
+  }
+  
+  .menu li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 1.6em 1em;
+      font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;
+  }
+  
+  .menu li a:hover {
+      background:tomato;
+  }
+  
+  .sub-menu > li {
+      display: block;
+  }
+  /* Styles for Single Level Menu */
+  @media screen and (max-width: 30em){
+      .multi-level-nav ul ul li a {
+          padding-left: 2em;
+      }
+  
+      .dropdown-toggle {
+          display: none;
+      }
+  }
+  
+  @media screen and (min-width: 30em){
+      .multi-level-nav ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }	
+  
+      .multi-level-nav li {
+          flex: 1 0 auto;
+          position: relative;
+      }
+  
+      li.has-children > a {
+          padding-right: 0;
+      }
+  
+      .multi-level-nav ul ul {
+          display: block;
+          position: absolute;
+          z-index:100;
+          width: 100%;
+      }
+  
+      .multi-level-nav ul ul li {
+          flex: 1 1 auto;
+      }
+  
+      .multi-level-nav ul .toggled-on {
+          display: flex;
+      }
+  
+      .dropdown-toggle {
+          margin: 0;
+          padding: 0 .5em;
+          border: 0;
+          font-family: 'FontAwesome';
+          content: "";
+          text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
+          background-color: transparent;
+      }
+  
+      .dropdown-toggle:after {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 42px;
+          color: white;
+          content: "\f107";
+          line-height: 1em;	
+      }
+  
+      .dropdown-toggle:hover,
+      .dropdown-toggle:focus {
+          background: hsl(0, 0%, 25%);
+      }
+  
+      .dropdown-toggle.toggle-on:after {
+          content: "\f106";
+      }
+  }
+  
+  /* Styles for social media menu */
+  
+  /* Find src URL and add in correct social media icon. */
+  .social-menu li a:before {
+      font-family: 'Fontawesome';
+      -webkit-font-smoothing: antialiased;
+      content: '\f08e';
+  }
+  
+  .social-menu li a[href*="dribbble.com"]::before { content: '\f17d'; }
+  
+  .social-menu li a[href*="facebook.com"]::before { content: '\f09a'; }
+  
+  .social-menu li a[href*="flickr.com"]::before { content: '\f16e'; }
+  
+  .social-menu li a[href*="foursquare.com"]::before { content: '\f180'; }
+  
+  .social-menu li a[href*="github.com"]::before { content: '\f09b'; }
+  
+  .social-menu li a[href*="plus.google.com"]::before { content: '\f0d5'; }
+  
+  .social-menu li a[href*="instagram.com"]::before { content: '\f16d'; }
+  
+  .social-menu li a[href*="jsfiddle.com"]::before { content: '\f1cc'; }
+  
+  .social-menu li a[href*="linkedin.com"]::before { content: '\f0e1'; }
+  
+  .social-menu li a[href*="pinterest.com"]::before { content: '\f0d2'; }
+  
+  .social-menu li a[href*="reddit.com"]::before { content: '\f1a1'; }
+  
+  .social-menu li a[href*="soundcloud.com"]::before { content: '\f1be'; }
+  
+  .social-menu li a[href*="stackoverflow.com"]::before { content: '\f16c'; }
+  
+  .social-menu li a[href*="tumblr.com"]::before { content: '\f173'; }
+  
+  .social-menu li a[href*="twitter.com"]::before { content: '\f099'; }
+  
+  .social-menu li a[href*="vimeo.com"]::before { content: '\f194'; }
+  
+  .social-menu li a[href*="vine.co"]::before { content: '\f1ca'; }
+  
+  .social-menu li a[href*="yelp.com"]::before { content: '\f1e9'; }
+  
+  .social-menu li a[href*="youtube.com"]::before { content: '\f167'; }
+  
+  .social-menu li a[href*="wordpress.com"]::before { content: '\f19a'; }
+  
+  /* Flexbox stuff */
+  
+  .social-menu ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+  }
+  
+  /*--------------------------------------------------------------
+  Accessibility
+  --------------------------------------------------------------*/
+  /* Text meant only for screen readers */
+  .screen-reader-text {
+      clip: rect(1px, 1px, 1px, 1px);
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+  }
+  
+  .screen-reader-text:hover,
+  .screen-reader-text:active,
+  .screen-reader-text:focus {
+      background-color: #f1f1f1;
+      border-radius: 3px;
+      box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+      clip: auto !important;
+      color: #21759b;
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      height: auto;
+      left: 5px;
+      line-height: normal;
+      padding: 15px 23px 14px;
+      text-decoration: none;
+      top: 5px;
+      width: auto;
+      z-index: 100000; /* Above WP toolbar */
+  }
+  
+  /* Styles for mixed menu (drop-down + social) */
+  .nav-mixed {
+    background: hsl(0, 0%, 15%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 

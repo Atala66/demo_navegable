@@ -1,16 +1,33 @@
+<div class="form">
 
-<div class="login-container">
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+		<div>
+				<p class="title">Welcome to Anjana</p>
+				<p>
+						<label for="username">Username: </label>
+						<input type="text" formControlName="username" id="username" autofocus>
+	<!---		<div *ngIf="username.touched && username.hasError('required')" class="error">
+    Username is required
+  </div>-->
+				</p>
+				<p>
+					<label for="password"> Password : </label>
+					<input type="password" formControlName="password" id="password">
+			<!--- <div *ngIf="password.touched && password.hasError('required')" class="error">
+    Password is required
+  </div>-->
+				</p>
+					<p>
+						<input type="submit" value="Register" class="btn">
+				</p>
+		</div>
+</form>
+  <p>
+  Form is {{loginForm.valid ? 'Valid' : 'Invalid'}}
+</p>
 
-  <form>
-    <label>Username</label>
-    <input type="text" />
-    <label>Password</label>
-    <input type="password" />
-    <div class="buttons">
-      <button>Login</button>
-      <button>Cancel</button>
-    </div>
-  </form> 
-
-
+<pre>
+{{loginForm.value | json}}
+</pre>
+  
 </div>

@@ -1,1 +1,15 @@
-<p>test-form-view works!</p>
+
+
+<form [formGroup]="signupForm" (ngSubmit)="submit()">
+  <app-test-form formControlName="profile"></app-test-form>
+  <app-test-password-form formControlName="password"></app-test-password-form>
+  <button>Sign Up</button>
+
+  <p>
+  Form is {{signupForm.valid ? 'Valid' : 'Invalid'}}
+</p>
+
+<pre>
+{{signupForm.value | json}}
+</pre>
+</form>

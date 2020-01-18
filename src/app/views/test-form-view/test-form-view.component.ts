@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-test-form-view',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestFormViewComponent implements OnInit {
 
-  constructor() { }
+  signupForm: FormGroup;
 
-  ngOnInit() {
+  constructor(
+    private formBuilder: FormBuilder
+    ) {
+    this.signupForm = this.formBuilder.group({
+      password: [],
+      profile: []
+    });
   }
 
+  ngOnInit() {  }
+
+  submit() {
+    console.log(this.signupForm.value);
+  }
 }

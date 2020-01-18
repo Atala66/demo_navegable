@@ -1,29 +1,54 @@
 
-	<div class="header">
-    <ul class="main-nav">
-         <li><a href="#">Logo</a></li>
-          <li><a href="#">Portal</a></li>
-          <li><a href="#">Tags</a></li>
-          <li><a href="#">Lineage</a>
-             <ul class="lineage-dropdown">
+
+<main class="main-area">
+  <div class="centered">
+    <section class="menu-section">
+      <div class="nav-mixed menu">
+        <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
+          <ul>
+            <li><a href="#">Logo</a></li>
+            <li><a href="#">Portal</a></li>
+            <li><a href="#">Tags</a></li>
+         <li class="has-children">
+              <a href="#">New</a>
+              <ul class="sub-menu">
+                <li (click)="goToRoute('test-form')"><a>New DSA</a></li>
+                <li><a href="#">New Dataset</a></li>
+                <li><a href="#">New Process</a></li>
+                <li><a href="#">New Solution</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Lineage</a>
+              <ul class="sub-menu">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+              </ul>
+            </li>
+            <li class="has-children"><a href="#">Requests</a>
+              <ul class="sub-menu">
                  <li><a href="#">Item 1</a></li>
-                 <li><a href="#">Item 2</a></li>
-             </ul>
-          </li>
-    <li><a href="#">New</a>
-        <ul class="entities-dropdown">
-           <li><a href="#">New DSA</a></li>
-           <li><a href="#">New Dataset</a></li>
-           <li><a href="#">New Process</a></li>
-           <li><a href="#">New Solution</a></li>
-        </ul>
-    </li>
-        <li><a href="#">Requests</a>
-            <ul class="requests-dropdown">
-                 <li><a href="#">Item 1</a></li>
-                 <li><a href="#">Item 2</a></li>
-             </ul>
-         </li>
-      </ul>
-	</div> 
+                <li><a href="#">Item 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- #multi-level-nav .multi-level-nav -->
+        <nav id="social-menu" class="social-menu" role="navigation">
+          <ul>
+            <li><a href="https://twitter.com/bugsyAlexander"><span class="screen-reader-text">Twitter</span></a></li>
+            <li><a href="https://github.com/bugsyAlexander"><span class="screen-reader-text">Github</span></a></li>
+            <li><a href="https://www.linkedin.com/pub/mynor-alexander/5b/943/877"><span class="screen-reader-text">LinkedIn</span></a></li>
+            <li><a href="http://dribbble.com"><span class="screen-reader-text">Dribbble</span></a></li>
+            <li><a href="http://instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
+          </ul>
+        </nav>
+        <!-- .social-menu -->
+      </div>
+      <!-- .mixed-menu -->
+    </section>
+    <!-- .menu-section -->
+  </div>
+  <!-- .centered -->
+</main>
 
