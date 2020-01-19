@@ -10,8 +10,8 @@
             <li><a>Portal</a></li>
             <li><a>Tags</a></li>
          <li class="has-children new">
-              <a (click)="toggleDropdown()">New</a>
-              <ul class="sub-menu" [ngClass]="isOpenDropdown ? 'visble' : 'not-visble' " >
+              <a (click)="toggleCombo('new')">New</a>
+              <ul class="sub-menu" [ngClass]="isOpenCombo ? 'visible' : 'not-visible' " >
                 <li (click)="goToRoute('test-form')"><a>New DSA</a></li>
                 <li><a>New Dataset</a></li>
                 <li><a>New Process</a></li>
@@ -19,15 +19,15 @@
               </ul>
             </li>
             <li class="has-children">
-              <a (click)="toggleDropdown()">Lineage</a>
-              <ul class="sub-menu" [ngClass]="isOpenDropdown ? 'visble' : 'not-visble' ">
+              <a (click)="toggleCombo('lineage')">Lineage</a>
+              <ul class="sub-menu" [ngClass]="isOpenCombo ? 'visible' : 'not-visible' ">
                 <li><a>Item 1</a></li>
                 <li><a>Item 2</a></li>
               </ul>
             </li>
             <li class="has-children">
-            <a  (click)="toggleDropdown()">Requests</a>
-              <ul class="sub-menu" [ngClass]="isOpenDropdown ? 'visble' : 'not-visble' " >
+            <a  (click)="toggleCombo('requests')">Requests</a>
+              <ul class="sub-menu" [ngClass]="isOpenCombo ? 'visible' : 'not-visible' " >
                  <li><a>Item 1</a></li>
                 <li><a>Item 2</a></li>
               </ul>
@@ -37,11 +37,10 @@
         <!-- #multi-level-nav .multi-level-nav -->
         <nav id="social-menu" class="social-menu" role="navigation">
           <ul>
-            <li><a href="https://twitter.com/bugsyAlexander"><span class="screen-reader-text">Twitter</span></a></li>
-            <li><a href="https://github.com/bugsyAlexander"><span class="screen-reader-text">Github</span></a></li>
-            <li><a href="https://www.linkedin.com/pub/mynor-alexander/5b/943/877"><span class="screen-reader-text">LinkedIn</span></a></li>
-            <li><a href="http://dribbble.com"><span class="screen-reader-text">Dribbble</span></a></li>
-            <li><a href="http://instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
+            <li><a>Icon 1</a></li>
+            <li><a>Icon 2</a></li>
+            <li><a>Icon 3</a></li>
+            <li><a>Combo User</a></li>
           </ul>
         </nav>
         <!-- .social-menu -->

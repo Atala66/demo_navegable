@@ -1,10 +1,12 @@
+@import '../../styles/global/_colors.less';
 
 .header-component {
-
   .menu-section {
-      padding-bottom: 2em;
-      margin-bottom: 2em;
-      border-bottom: 1px solid hsl(0, 0% );
+      border-bottom: var(--dark-color);  //1px solid hsl(0, 0% );
+      .multi-level-nav,
+      .social-menu {
+          cursor: pointer;
+      }
   }
   
   .menu ul {
@@ -31,6 +33,7 @@
   @media screen and (max-width: 30em){
       .multi-level-nav ul ul li a {
           padding-left: 2em;
+          cursor: pointer;
       }
 
   }
@@ -50,6 +53,9 @@
       li.has-children > a {
           padding-right: 0;
       }
+      .has-children.new {
+          width: 110px;
+      }
   
       .multi-level-nav ul ul {
           position: absolute;
@@ -59,7 +65,7 @@
           &.visible {
               display: block;
           }
-          &.not-visble {
+          &.not-visible {
               display: none;
           }
       }
@@ -77,93 +83,15 @@
           content: "\f106";
       }
   }
-  
-  .social-menu li a:before {
-      font-family: 'Fontawesome';
-      -webkit-font-smoothing: antialiased;
-      content: '\f08e';
-  }
-  
-  .social-menu li a[href*="dribbble.com"]::before { content: '\f17d'; }
-  
-  .social-menu li a[href*="facebook.com"]::before { content: '\f09a'; }
-  
-  .social-menu li a[href*="flickr.com"]::before { content: '\f16e'; }
-  
-  .social-menu li a[href*="foursquare.com"]::before { content: '\f180'; }
-  
-  .social-menu li a[href*="github.com"]::before { content: '\f09b'; }
-  
-  .social-menu li a[href*="plus.google.com"]::before { content: '\f0d5'; }
-  
-  .social-menu li a[href*="instagram.com"]::before { content: '\f16d'; }
-  
-  .social-menu li a[href*="jsfiddle.com"]::before { content: '\f1cc'; }
-  
-  .social-menu li a[href*="linkedin.com"]::before { content: '\f0e1'; }
-  
-  .social-menu li a[href*="pinterest.com"]::before { content: '\f0d2'; }
-  
-  .social-menu li a[href*="reddit.com"]::before { content: '\f1a1'; }
-  
-  .social-menu li a[href*="soundcloud.com"]::before { content: '\f1be'; }
-  
-  .social-menu li a[href*="stackoverflow.com"]::before { content: '\f16c'; }
-  
-  .social-menu li a[href*="tumblr.com"]::before { content: '\f173'; }
-  
-  .social-menu li a[href*="twitter.com"]::before { content: '\f099'; }
-  
-  .social-menu li a[href*="vimeo.com"]::before { content: '\f194'; }
-  
-  .social-menu li a[href*="vine.co"]::before { content: '\f1ca'; }
-  
-  .social-menu li a[href*="yelp.com"]::before { content: '\f1e9'; }
-  
-  .social-menu li a[href*="youtube.com"]::before { content: '\f167'; }
-  
-  .social-menu li a[href*="wordpress.com"]::before { content: '\f19a'; }
-  
+
   /* Flexbox stuff */
-  
   .social-menu ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
   }
   
-  /*--------------------------------------------------------------
-  Accessibility
-  --------------------------------------------------------------*/
-  /* Text meant only for screen readers */
-  .screen-reader-text {
-      clip: rect(1px, 1px, 1px, 1px);
-      position: absolute !important;
-      height: 1px;
-      width: 1px;
-      overflow: hidden;
-  }
-  
-  .screen-reader-text:hover,
-  .screen-reader-text:active,
-  .screen-reader-text:focus {
-      background-color: #f1f1f1;
-      border-radius: 3px;
-      box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-      clip: auto !important;
-      color: #21759b;
-      display: block;
-      font-size: 14px;
-      font-weight: bold;
-      height: auto;
-      left: 5px;
-      line-height: normal;
-      padding: 15px 23px 14px;
-      text-decoration: none;
-      top: 5px;
-      width: auto;
-      z-index: 100000; /* Above WP toolbar */
-  }
+
   
   /* Styles for mixed menu (drop-down + social) */
   .nav-mixed {
