@@ -1,9 +1,10 @@
 
-  /* Base styles that apply to all menus */
+.header-component {
+
   .menu-section {
       padding-bottom: 2em;
       margin-bottom: 2em;
-      border-bottom: 1px solid hsl(0, 0%, );
+      border-bottom: 1px solid hsl(0, 0% );
   }
   
   .menu ul {
@@ -25,19 +26,13 @@
   .menu li a:hover {
       background:tomato;
   }
-  
-  .sub-menu > li {
-      display: block;
-  }
+
   /* Styles for Single Level Menu */
   @media screen and (max-width: 30em){
       .multi-level-nav ul ul li a {
           padding-left: 2em;
       }
-  
-      .dropdown-toggle {
-          display: none;
-      }
+
   }
   
   @media screen and (min-width: 30em){
@@ -57,38 +52,20 @@
       }
   
       .multi-level-nav ul ul {
-          display: block;
           position: absolute;
           z-index:100;
           width: 100%;
+          flex: 2 0 auto;
+          &.visible {
+              display: block;
+          }
+          &.not-visble {
+              display: none;
+          }
       }
   
       .multi-level-nav ul ul li {
-          flex: 1 1 auto;
-      }
-  
-      .multi-level-nav ul .toggled-on {
-          display: flex;
-      }
-  
-      .dropdown-toggle {
-          margin: 0;
-          padding: 0 .5em;
-          border: 0;
-          font-family: 'FontAwesome';
-          content: "";
-          text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
-          background-color: transparent;
-      }
-  
-      .dropdown-toggle:after {
-          position: relative;
-          top: 0;
-          left: 0;
-          width: 42px;
-          color: white;
-          content: "\f107";
-          line-height: 1em;	
+          flex: 2 1 auto;
       }
   
       .dropdown-toggle:hover,
@@ -101,9 +78,6 @@
       }
   }
   
-  /* Styles for social media menu */
-  
-  /* Find src URL and add in correct social media icon. */
   .social-menu li a:before {
       font-family: 'Fontawesome';
       -webkit-font-smoothing: antialiased;
@@ -199,3 +173,4 @@
     justify-content: space-between;
   }
 
+}

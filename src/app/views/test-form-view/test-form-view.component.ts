@@ -13,13 +13,17 @@ export class TestFormViewComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder
     ) {
-    this.signupForm = this.formBuilder.group({
-      password: [],
-      profile: []
-    });
+      this.signupForm = this.formBuilder.group({
+        password: [],
+        profile: []
+      });
   }
 
-  ngOnInit() {  }
+  ngOnInit() {
+
+    }
+
+
 
   submit() {
     console.log(this.signupForm.value);

@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 import { TestFormComponent } from './test-form.component';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
+const routes: Routes = [
+   {path: '', component: TestFormComponent }
+];
 
 @NgModule({
   declarations: [
@@ -12,7 +15,8 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+   // RouterModule.forChild(routes)
   ],
   exports: [
     TestFormComponent

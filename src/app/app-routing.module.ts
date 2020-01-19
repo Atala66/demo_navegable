@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: '', loadChildren: () => import(`./views/login/login.module`).
   then(m => m.LoginModule)},
   // login
-  { path: '', loadChildren: () => import(`./views/login/login.module`).
+  { path: 'login', loadChildren: () => import(`./views/login/login.module`).
   then(m => m.LoginModule)},
   // home
   { path: 'home', loadChildren: () => import(`./views/home/home.module`).

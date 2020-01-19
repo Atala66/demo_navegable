@@ -1,34 +1,35 @@
 
-
+<div class="header-component">
 <main class="main-area">
   <div class="centered">
     <section class="menu-section">
       <div class="nav-mixed menu">
         <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
           <ul>
-            <li><a href="#">Logo</a></li>
-            <li><a href="#">Portal</a></li>
-            <li><a href="#">Tags</a></li>
-         <li class="has-children">
-              <a href="#">New</a>
-              <ul class="sub-menu">
+            <li><a>Logo</a></li>
+            <li><a>Portal</a></li>
+            <li><a>Tags</a></li>
+         <li class="has-children new">
+              <a (click)="toggleDropdown()">New</a>
+              <ul class="sub-menu" [ngClass]="isOpenDropdown ? 'visble' : 'not-visble' " >
                 <li (click)="goToRoute('test-form')"><a>New DSA</a></li>
-                <li><a href="#">New Dataset</a></li>
-                <li><a href="#">New Process</a></li>
-                <li><a href="#">New Solution</a></li>
+                <li><a>New Dataset</a></li>
+                <li><a>New Process</a></li>
+                <li><a>New Solution</a></li>
               </ul>
             </li>
             <li class="has-children">
-              <a href="#">Lineage</a>
-              <ul class="sub-menu">
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 2</a></li>
+              <a (click)="toggleDropdown()">Lineage</a>
+              <ul class="sub-menu" [ngClass]="isOpenDropdown ? 'visble' : 'not-visble' ">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
               </ul>
             </li>
-            <li class="has-children"><a href="#">Requests</a>
-              <ul class="sub-menu">
-                 <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 2</a></li>
+            <li class="has-children">
+            <a  (click)="toggleDropdown()">Requests</a>
+              <ul class="sub-menu" [ngClass]="isOpenDropdown ? 'visble' : 'not-visble' " >
+                 <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
               </ul>
             </li>
           </ul>
@@ -51,4 +52,5 @@
   </div>
   <!-- .centered -->
 </main>
+</div>
 

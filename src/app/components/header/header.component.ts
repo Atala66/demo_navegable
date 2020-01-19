@@ -6,17 +6,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
-  public isOpenDropdown: boolean;
+  public isOpenDropdown = false;
 
   constructor(
     // tslint:disable-next-line:variable-name
     private _routerSrv: Router
   ) { }
 
-  ngOnInit() {
-    this.isOpenDropdown = false;
-   }
+  ngOnInit() {}
 
+   public toggleDropdown() {
+    this.isOpenDropdown = !this.isOpenDropdown;
+    console.log(this.isOpenDropdown);
+   }
 
 
   public goToRoute(route: any) {

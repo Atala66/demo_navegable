@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
 
   public validateForm() {
      console.log('valida el formulario');
-     this._routerSrv.navigate(['home']); 
+     this._routerSrv.navigate(['home']);
   }
 
 }
