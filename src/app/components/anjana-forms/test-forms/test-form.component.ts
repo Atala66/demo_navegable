@@ -39,7 +39,9 @@ export class TestFormComponent implements ControlValueAccessor, OnDestroy {
     return this.form.controls.email;
   }
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder
+    ) {
     // create the inner form
     this.form = this.formBuilder.group({
       firstName: [],

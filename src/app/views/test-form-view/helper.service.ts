@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class HelperService {
-    private message = new BehaviorSubject<string>('En espera de un nombre');
+    public message = new BehaviorSubject<string>('En espera de un nombre');
     public customMessage = this.message.asObservable();
     constructor(
 
@@ -12,4 +12,18 @@ export class HelperService {
     public changeMessage(msg: string): void {
       this.message.next(msg);
     }
-  }
+
+
+    // public getMockFormGenerator() {
+    // }
+
+    // public setMessage(msg: string) {
+    //   this.message = new BehaviorSubject<string>(msg);
+    // }
+
+    // public getMessage(): void {
+    // // return this.message;
+    // }
+
+ }
+ 

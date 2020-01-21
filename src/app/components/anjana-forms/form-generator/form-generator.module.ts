@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
-import { TestFormComponent } from './test-form.component';
+import { Routes } from '@angular/router';
+import { FormGeneratorComponent } from './form-generator.component';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
-   {path: '', component: TestFormComponent }
+   {path: '', component: FormGeneratorComponent }
 ];
 
 @NgModule({
   declarations: [
-    TestFormComponent
+    FormGeneratorComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule
-   // RouterModule.forChild(routes)
   ],
   exports: [
-    TestFormComponent
+    FormGeneratorComponent
   ]
 })
-export class TestFormModule { }
+export class FormGeneratorModule { }
