@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-form-generator',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-generator.component.less']
 })
 export class FormGeneratorComponent implements OnInit {
+ // @Input(): data
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder , FormControl, Validators } from '@angular/forms';
 import { TestFormService } from './test-form.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { TestFormService } from './test-form.service';
 })
 export class TestFormViewComponent implements OnInit {
   signupForm: FormGroup;
+  public data: [] = [];
 
   constructor(
    // private formBuilder: FormBuilder
@@ -27,7 +28,9 @@ export class TestFormViewComponent implements OnInit {
   public getFormServiceData() {
     this.testFormSrv.getMockFormGenerator().subscribe(
       (response) => {
-        console.log('response::', response);
+        this.data = response.data;
+        console.log('response::', this.data);
+
       },
       error => {
         console.log('response::', error);
