@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { Routes } from '@angular/router';
 import { FormGeneratorComponent } from './form-generator.component';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+// componentes reutilizables
+import { InputTextComponent } from './components/input-text/input-text.component';
+import { InputNumberComponent } from './components/input-number/input-number.component';
+import { SelectComponent } from './components/select/select.component';
 
 const routes: Routes = [
    {path: '', component: FormGeneratorComponent }
@@ -10,7 +14,10 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    FormGeneratorComponent
+    FormGeneratorComponent,
+    InputTextComponent,
+    InputNumberComponent,
+    SelectComponent
   ],
   imports: [
     CommonModule,

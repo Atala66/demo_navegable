@@ -3,55 +3,20 @@
     "description": "Successful operation.",
     "data": [
         {
-            "templateAttribute": {
-                "idTemplateAttribute": 7,
-                "attribute": {
-                    "idAttribute": 7,
-                    "name": "Ontology",
-                    "dataType": "Alphanumeric",
-                    "intern": false,
-                    "description": "Ontology"
-                },
-                "active": true,
-                "required": true,
-                "configurable": true,
-                "lockedOnEdition": false
-            },
-            "attributeValues": []
-        },
-        {
-            "templateAttribute": {
-                "idTemplateAttribute": 9,
-                "attribute": {
-                    "idAttribute": 9,
-                    "name": "Data treatment",
-                    "dataType": "Alphanumeric",
-                    "intern": false,
-                    "description": "Data treatment"
-                },
-                "active": true,
-                "required": true,
-                "configurable": true,
-                "lockedOnEdition": false
-            },
-            "attributeValues": []
-        },
-        {
-            "templateAttribute": {
-                "idTemplateAttribute": 10,
-                "attribute": {
-                    "idAttribute": 10,
-                    "name": "Quality level",
-                    "dataType": "Alphanumeric",
-                    "intern": false,
-                    "description": "Quality level"
-                },
-                "active": true,
-                "required": true,
-                "configurable": true,
-                "lockedOnEdition": false
-            },
-            "attributeValues": []
-        }
+            "type":"text",
+            "label":"Name",
+             "name": "name"
+          },
+          {
+            "type":"number",
+            "label":"Age",
+            "name": "age"
+          },
+          {
+            "type":"select",
+            "label":"cluster",
+            "options":["Marketing", "Finance", "Audit", "Legal"],
+            "name" : "cluster"
+          }
     ]
 }

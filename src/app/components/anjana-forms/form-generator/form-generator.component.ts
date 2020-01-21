@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-form-generator',
@@ -6,11 +7,28 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./form-generator.component.less']
 })
 export class FormGeneratorComponent implements OnInit {
- // @Input(): data
+  // nuestro config acepta un array de objetos
+ @Input() config: any[] = [];  // esto sera un modelo
+ public form: FormGroup;
 
-  constructor() { }
+  constructor(
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit() {
+    this.form = this.generateFormGroup();
   }
+
+
+  public generateFormGroup() {
+      const group = this.fb.group({});
+      this.config.forEach( control => group.addControl(control.name, this.fb.control(control)));  // this.createControl(control)
+      return group;
+    }
+
+
+  // createControl(config) {
+    
+  // }
 
 }

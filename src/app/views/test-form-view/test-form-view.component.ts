@@ -9,7 +9,7 @@ import { TestFormService } from './test-form.service';
 })
 export class TestFormViewComponent implements OnInit {
   signupForm: FormGroup;
-  public data: [] = [];
+  public config: [] = [];
 
   constructor(
    // private formBuilder: FormBuilder
@@ -28,8 +28,8 @@ export class TestFormViewComponent implements OnInit {
   public getFormServiceData() {
     this.testFormSrv.getMockFormGenerator().subscribe(
       (response) => {
-        this.data = response.data;
-        console.log('response::', this.data);
+        this.config = response.data;
+        console.log('response::', this.config);
 
       },
       error => {
