@@ -1,6 +1,8 @@
 <div class="dynamic-field form-input-select" [formGroup]="group">
   <label>{{ config?.label  }}</label>
-      <select [formControlName]="config.name">
+      <select
+      [attr.disabled]="config.isDisabled ? 'disabled' : null"
+      [formControlName]="config.name">
         <option value=""></option>
         <option *ngFor="let option of config.options">{{ option  }}</option>
       </select>

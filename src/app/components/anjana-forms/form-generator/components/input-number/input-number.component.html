@@ -3,5 +3,6 @@
 <input
 type="number"
 [attr.placeholder]="config?.placeholder"
+[attr.disabled]="config.isDisabled ? 'disabled' : null"
 [formControlName]="config.name" />
 </div>

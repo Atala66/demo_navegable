@@ -25,5 +25,12 @@
 - Dentro le pasamos this.config y this.group
 
 
+# COMPONENTE PADRE (  VISTA )
+- Llamamos al servicio que traera la template de back con los campos del formulario.
+- Instancia del formulario:
+  <app-form-generator *ngIf="config"
+   [config]="config"></app-form-generator>
+- MUY IMPORTANTE: Pasarle el ngIf de los datos de la llamada  O intentará renderizar campos de formulario que aún no existen.
+  
 
 

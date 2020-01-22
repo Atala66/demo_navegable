@@ -5,20 +5,22 @@
             "type": "text",
             "label": "Name",
             "name": "text",
-            "isEditable": false
+            "placeholder": "Enter name....",
+            "isDisabled": false
         },
         {
             "type": "number",
             "label": "Age",
             "name": "age",
-            "isEditable": false
+            "placeholder": "Enter age....",
+            "isDisabled": false
         },
         {
             "type": "select",
             "label": "Cluster",
             "name": "cluster",
             "options": ["Marketing", "Finance", "Audit", "Legal"],
-            "isEditable": false
+            "isDisabled": true
         }
     ]
 }

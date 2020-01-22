@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
+// model
+import { FieldConfig } from './form-generator.model';
+
 @Component({
   selector: 'app-form-generator',
   templateUrl: './form-generator.component.html',
@@ -8,7 +11,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 })
 export class FormGeneratorComponent implements OnInit {
   // nuestro config acepta un array de objetos
- @Input() config: any[] = [];  // esto sera un modelo
+ @Input() config: FieldConfig[] = [];  // esto sera un modelo
  public form: FormGroup;
 
   constructor(

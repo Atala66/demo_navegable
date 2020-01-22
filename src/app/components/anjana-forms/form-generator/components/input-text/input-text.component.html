@@ -4,5 +4,7 @@
 <input
 type="text"
 [attr.placeholder]="config?.placeholder"
-[formControlName]="config.name" />
+[attr.disabled]="config.isDisabled ? 'disabled' : null"
+[formControlName]="config.name" 
+/>
 </div>
