@@ -1,5 +1,7 @@
 <div class="dynamic-field form-input-number" [formGroup]="group">
-<label>{{  config?.label  }}</label>
+<label>{{  config?.label  }}
+<span *ngIf="config?.isRequired">*</span>
+</label>
 <input
 type="number"
 [attr.placeholder]="config?.placeholder"

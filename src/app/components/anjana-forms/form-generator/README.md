@@ -31,6 +31,20 @@
 - Instancia del formulario:
   <app-form-generator *ngIf="config" [config]="config"></app-form-generator>
 - MUY IMPORTANTE: Pasarle el ngIf para la response del servicio o intentará renderizar campos de formulario que aún no existen.
+
+# @ to think()
+- Formulario integrado dentro de las tabs, para cada step del formulario, pinta 1 tab y muestra en el solo esa parte de formulario.
+  Ej: 3 steps = 3 TABS
+- El cmp tabs tiene que saber cuantos steps viene del servicio del form. steps.length. PRU: solo tiene que saber cuantas tabs pintar.
+- Hay que "cortar" el form cuando se acabe el step:
+- Opcion 1:
+  Por cada step generamos un <app-form-generator *ngIf="config" [config]="config"></app-form-generator> ?????? 
+  Problema: Todo el formulario llega en la misma llamada
+  Solucion: Con un if que determina el step number?
+- Opcion 2:
+  ¿ O solo generamos uno y lo "cortamos" ?
+- Tabs y form (hijos) se engancharan al servicio del cmp padre (vista).
+
   
 
 

@@ -6,6 +6,7 @@
             "label": "Name",
             "name": "text",
             "placeholder": "Enter name....",
+            "isRequired": true,
             "isDisabled": false
         },
         {
@@ -13,6 +14,7 @@
             "label": "Age",
             "name": "age",
             "placeholder": "Enter age....",
+            "isRequired": false,
             "isDisabled": true
         },
         {
@@ -20,6 +22,7 @@
             "label": "Cluster",
             "name": "cluster",
             "options": ["Marketing", "Finance", "Audit", "Legal"],
+            "isRequired": false,
             "isDisabled": false
         }
     ]
