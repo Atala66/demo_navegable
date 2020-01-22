@@ -13,14 +13,14 @@
             "label": "Age",
             "name": "age",
             "placeholder": "Enter age....",
-            "isDisabled": false
+            "isDisabled": true
         },
         {
             "type": "select",
             "label": "Cluster",
             "name": "cluster",
             "options": ["Marketing", "Finance", "Audit", "Legal"],
-            "isDisabled": true
+            "isDisabled": false
         }
     ]
 }
