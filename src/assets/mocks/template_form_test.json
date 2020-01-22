@@ -5,16 +5,19 @@
         {
             "type":"text",
             "label":"Name",
+            "name": "name",
              "isEditable": false
           },
           {
             "type":"number",
             "label":"Age",
+            "name": "age",
             "isEditable": false
           },
           {
             "type":"select",
             "label":"cluster",
+            "name": "cluster",
             "options":["Marketing", "Finance", "Audit", "Legal"],
             "isEditable": false
           }
