@@ -7,6 +7,8 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextComponent } from './components/input-text/input-text.component';
 import { InputNumberComponent } from './components/input-number/input-number.component';
 import { SelectComponent } from './components/select/select.component';
+// directiva
+import { DynamicFieldDirective } from './dynamic-field.directive';
 
 const routes: Routes = [
    {path: '', component: FormGeneratorComponent }
@@ -14,6 +16,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
+    DynamicFieldDirective,
     FormGeneratorComponent,
     InputTextComponent,
     InputNumberComponent,
@@ -26,6 +29,11 @@ const routes: Routes = [
   ],
   exports: [
     FormGeneratorComponent
-  ]
+  ],
+  entryComponents: [
+    InputTextComponent,
+    InputNumberComponent,
+    SelectComponent
+  ],
 })
 export class FormGeneratorModule { }
