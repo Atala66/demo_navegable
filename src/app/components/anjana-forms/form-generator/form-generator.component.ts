@@ -22,14 +22,14 @@ export class FormGeneratorComponent implements OnInit {
 
   public generateFormGroup() {
       const group = this.fb.group({});
-      this.config.forEach( control => group.addControl(control.name, this.createControl(control)));
+      this.config.forEach( control => group.addControl(control.name, this.fb.control(control)));
       return group;
     }
 
 
-  createControl( config ) {
-    const { disabled, validations, value } = config;
-    return this.fb.control({ disabled, value }, validations);
-  }
+  // createControl( config ) {
+  //   const { disabled, validations, value } = config;
+  //   return this.fb.control({ disabled, value }, validations);
+  // }
 
 }

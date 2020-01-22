@@ -1,6 +1,7 @@
 <div class="test-form-view">
 <!-- <app-sidebar-navigation></app-sidebar-navigation> -->
-  <app-form-generator [config]="config"></app-form-generator>
+  <app-form-generator *ngIf="config"
+   [config]="config"></app-form-generator>
 
   <!-- 
   <form class="sign-up-form" [formGroup]="signupForm" (ngSubmit)="submit()">

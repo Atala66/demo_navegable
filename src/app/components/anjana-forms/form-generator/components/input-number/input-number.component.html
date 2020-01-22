@@ -1,10 +1,7 @@
-<div class="dynamic-field form-input-number"
-[formGroup]="group">
-<label>{{ config?.label   }}</label>
+<div class="dynamic-field form-input-number" [formGroup]="group">
+<label>{{  config?.label  }}</label>
 <input
 type="number"
 [attr.placeholder]="config?.placeholder"
-[formControlName]="config?.name" />
-
-
+[formControlName]="config.name" />
 </div>

@@ -1,25 +1,24 @@
 {
     "code": "0001",
     "description": "Successful operation.",
-    "data": [
+    "data": [{
+            "type": "text",
+            "label": "Name",
+            "name": "text",
+            "isEditable": false
+        },
         {
-            "type":"text",
-            "label":"Name",
-            "name": "name",
-             "isEditable": false
-          },
-          {
-            "type":"number",
-            "label":"Age",
+            "type": "number",
+            "label": "Age",
             "name": "age",
             "isEditable": false
-          },
-          {
-            "type":"select",
-            "label":"cluster",
+        },
+        {
+            "type": "select",
+            "label": "Cluster",
             "name": "cluster",
-            "options":["Marketing", "Finance", "Audit", "Legal"],
+            "options": ["Marketing", "Finance", "Audit", "Legal"],
             "isEditable": false
-          }
+        }
     ]
 }
