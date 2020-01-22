@@ -23,7 +23,6 @@ import { SelectComponent } from './components/anjana-forms/form-generator/compon
     HomeModule,
     LoginModule,
     TestFormViewModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

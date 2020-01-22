@@ -13,8 +13,8 @@ import { SelectComponent } from "./components/select/select.component";
 
 // objeto componentes para el factory
 const components = {
-  inputNumber: InputNumberComponent,
-  inputText: InputTextComponent,
+  number: InputNumberComponent,
+  text: InputTextComponent,
   select: SelectComponent
 };
 
@@ -34,9 +34,9 @@ export class DynamicFieldDirective implements OnInit {
 
   ngOnInit() {
     // si el tipo de componente no existe en el objeto
-    if(!components[this.config.type]) {
-      console.log('no existe el tipo de componente especificado');
-    }
+    // if(!components[this.config.type]) {
+    //   console.log('no existe el tipo de componente especificado');
+    // }
     const component = components[this.config.type];
     const factory = this.resolver.resolveComponentFactory<any>(component);
     // crea el cmp a traves de la factoria

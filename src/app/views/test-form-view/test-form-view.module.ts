@@ -12,6 +12,7 @@ import { TestFormViewComponent } from './test-form-view.component';
  // import { TestPasswordFormComponent } from 'src/app/components/anjana-forms/test-password-form/test-password-form.component';
 import { HelperService } from './helper.service';
 import { TestFormService } from './test-form.service';
+import { FormGeneratorComponent } from 'src/app/components/anjana-forms/form-generator/form-generator.component';
 
 
 const routes: Routes = [
@@ -33,7 +34,8 @@ const routes: Routes = [
     // TestPasswordFormModule,
   ],
   exports: [
-    TestFormViewComponent
+    TestFormViewComponent,
+    FormGeneratorComponent
   ],
   providers: [
     HelperService,
